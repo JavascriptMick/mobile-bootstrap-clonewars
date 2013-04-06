@@ -20,3 +20,19 @@ My first target is the Facebook...
 http://m.facebook.com/
 
 in particular, the login screen because its simple and I might actually be able to succeed :/
+
+making it go
+------------
+To install the dependencies, use:
+
+    npm install
+
+To run the (tiny) server, use:
+
+    node server
+
+To compile the (even tinyer) less stylesheet, use:
+
+    lessc less/styles.less css/styles.css
+
+

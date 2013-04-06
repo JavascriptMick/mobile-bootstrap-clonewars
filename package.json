@@ -1,0 +1,9 @@
+{
+    "name": "mobile-bootstrap-clonewars"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "less": ">=1.3.3"
+    , "connect": ">= 2.4.6"
+  }
+}
