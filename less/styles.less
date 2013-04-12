@@ -1,9 +1,62 @@
-.rounded-corners(@border-radius) {
-    -webkit-border-radius: @border-radius;
-    -moz-border-radius: @border-radius;
-    border-radius: @border-radius;
+@import "../bootstrap/less/bootstrap.less";
+
+// Vertical input group
+// --------------------
+.input-group-vertical > input:first-child {
+  .border-bottom-radius(0);
+  .border-top-radius(@border-radius-base);
+  &.input-small {
+    .border-top-radius(@border-radius-small);
+  }
+  &.input-large {
+    .border-top-radius(@border-radius-large);
+  }
+  margin-bottom: -1px;
 }
 
-input[type="text"]{
-    .rounded-corners(10px);
+/* That troublesome middle child.. so moody
+
+Note that I wanted to use the approach of removing radius from all .input-group-vertical > input.. but I couldn't get this to override the default style so I fell back to specifying the 'middle' child with no radii */
+
+.input-group-vertical > input:not(:first-child),
+.input-group-vertical > input:not(:last-child)
+ {
+  .border-bottom-radius(0);
+  .border-top-radius(0);
+  margin-bottom: -1px;
+}
+
+.input-group-vertical> input:last-child {
+  .border-top-radius(0);
+  .border-bottom-radius(@border-radius-base);
+  &.input-small {
+    .border-bottom-radius(@border-radius-small);
+  }
+  &.input-large {
+    .border-bottom-radius(@border-radius-large);
+  }
+  margin-bottom: @line-height-base;
+}
+
+// Frig with the responsive container widths so they don't jump around for larger sizes
+// ------------------------------------------------------------------------------------
+// Responsive: Tablets and up
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 728px;
+  }
+}
+
+// Responsive: Desktops and up
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 728px;
+  }
+}
+
+// Responsive: Large desktops and up
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 728px;
+  }
 }
