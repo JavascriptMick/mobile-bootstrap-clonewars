@@ -31,7 +31,7 @@ To run the (tiny) server, use:
 
     node server
 
-To compile the (even tinyer) less stylesheet, use:
+To compile the (even tinier) less stylesheet, use:
 
     lessc less/styles.less css/styles.css
 
